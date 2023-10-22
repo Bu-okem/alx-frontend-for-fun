@@ -329,14 +329,14 @@ a:active {
 /* Grid
       ============================= */
 
-.row {
-  display: flex;
-}
-
 ul.row {
   margin: -1rem;
   padding: 0;
   list-style: none;
+}
+
+.row {
+  display: flex;
 }
 
 [class*='col-'] {
@@ -355,11 +355,15 @@ ul.row {
       ============================= */
 
 .nav {
-  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
+  display: flex;
+}
+
+.nav .nav-item + .nav-item {
+  margin: var(--nav-item-margin);
 }
 
 .nav .nav-item {
@@ -367,10 +371,6 @@ ul.row {
   font-weight: var(--nav-item-font-weight);
   font-size: var(--nav-item-font-size);
   letter-spacing: var(--nav-item-letter-spacing);
-}
-
-.nav .nav-item + .nav-item {
-  margin: var(--nav-item-margin);
 }
 
 .nav .nav-link {
@@ -407,7 +407,7 @@ ul.row {
   padding: var(--header-padding);
   position: relative;
   z-index: 3;
-  background: transparent !important;
+  background: transparent;
 }
 
 .header-container {
@@ -532,22 +532,19 @@ ul.row {
   min-height: 50vh;
 }
 
-/* Section Latest news
-    ============================= */
+/* Section Latest news ============================= */
 
 .section-latest-news .row {
   flex-direction: row-reverse;
 }
 
-/* Section SERVICES
-    ============================= */
+/* Section SERVICES ============================= */
 
 .section-services .row {
   flex-wrap: wrap;
 }
 
-/* Section ABOUT US
-    ============================= */
+/* Section ABOUT US */
 
 .section-about-us [class*='col-'] {
   align-self: center;
